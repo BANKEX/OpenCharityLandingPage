@@ -1,12 +1,12 @@
 @import "vars"
 
-
-
 /*==========  Desktop First  ==========*/
+@media only screen and (max-width : 2560px)
+  .under-control .bg-under-control
+    width: 50%
 
 @media only screen and (max-width : 1600px)
   .rignt-content-wrap .cloud-5
-    
     right: 10px
   .main-title
     margin-top: 0
@@ -19,7 +19,6 @@
   .left-content-wrap .airplane
     width: 480px
     height: 400px
-
     top: 194px
   .left-content-wrap .cloud-1
     left: 2%
@@ -28,40 +27,38 @@
     left: 29%
     top: 110px
   .left-content-wrap .cloud-3
-    width: 85%
-    width: 280px
     left: 22%
-    //bottom: 0
-  .under-control:before
-    width: 800px
+  .under-control .under-control-slogan
+    font-size: 55px
   .section-interview
-    padding-bottom: 150px
+    padding-bottom: 0
+  .under-control .bg-under-control
+    width: 800px
+  .section-confidence .confidence-text
+    margin-bottom: 100px
 //Extra large: ≥1200px
 @media only screen and (max-width : 1400px)
   .rignt-content-wrap .cloud-5
     width: 40%
   .left-content-wrap .cloud
-    //width: 60%
     max-width: 290px
   .rignt-content-wrap
     .cloud-4
       width: 40%
       max-width: 250px
   .left-content-wrap .cloud-1
-    //width: 60%
     width: 200px
   .left-content-wrap .airplane
     max-width: 400px
     background-size: 100%
     background-position: center
   .section-baner-wrap
-    padding: 18px 60px
-  //.left-content-wrap .cloud
-  //  width: 45%
+    padding: 5px 60px
   .left-content-wrap .airplane
-    width: 540px
     width: 494px
-
+  .section-industry
+    height: 100vh
+    max-height: 100%
   .btn-more
     width: 290px
     height: 50px
@@ -72,7 +69,7 @@
     font-size: 20px
   .under-control
     min-height: auto
-  .under-control:before
+  .bg-under-control
     min-height: auto
     height: 100%
   .section-industry .img-wrap
@@ -122,14 +119,28 @@
     font-size: 24px
   .section-technologies .scheme-wrap
     padding-top: 170px
+    padding-top: 350px
   .section-technologies .elem-item-main span
     font-size: 60px
   .section-technologies .scheme-wrap .trust-item
     font-size: 24px
   .section-interview
     padding-bottom: 58px
+  .main-title
+    font-size: 55px
+  .section-baner-wrap
+    padding: 5px 60px
+  .btn-more
+    width: 260px
+    font-size: 20px
+  .under-control .under-control-slogan
+    font-size: 40px
+  .section-item
+    padding-top: 70px
 //Extra large: ≥1200px
 @media only screen and (max-width : 1200px)
+  .section-open-charity .charity-text
+    font-size: 20px
   .organization .donation-slogan
     font-size: 26px
   .organization .charity-slogan
@@ -138,16 +149,15 @@
     padding-right: 30px
   .organization .bankex-foundation
     padding-left: 30px
-  .under-control:before
+  .bg-under-control
     opacity: 0.1
   .main-title
     font-size: 50px
   .header-text
     max-width: 71%
     font-size: 19px
-
   .section-baner-wrap
-    padding: 18px 30px
+    padding: 5px 30px
   .scheme-wrap .scheme-elem-item
     font-size: 24px
   .scheme-wrap .trust-item
@@ -156,12 +166,10 @@
     font-size: 45px
   .section-technologies .scheme-wrap .trust-item
     font-size: 22px
-  .under-control:before
+  .bg-under-control
     width: 100%
   .section-industry .industry-slogan
     font-size: 45px
-  .section-industry span
-    //top: 40%
   .section-industry .img-wrap img
     width: 120px
     height: 120px
@@ -171,10 +179,10 @@
     padding-top: 80px
   .under-control .control-list .list-item
     font-size: 30px
-
+  .under-control .bg-under-control
+    width: 100%
 //Large: ≥992px
 +media-breakpoint-down(lg)
-  
   .organization .donation-slogan
     font-size: 21px
   .organization .charity-slogan
@@ -186,10 +194,7 @@
     left: -120px
   .scheme-wrap .trust-item.trust-r-t
     top: -17px
-    //top: 0
     left: 83px
-    //min-width: 100px
-    //white-space: nowrap
   .scheme-wrap .trust-item.trust-r-t:before
     bottom: -40px
   .scheme-wrap .trust-item.trust-l-b
@@ -215,9 +220,7 @@
     flex-direction: column
   .scheme-wrap .scheme-elem-item
     margin: 15px 0
-
     height: 220px
-    //border: 1px solid #fff
     display: flex
     align-items: center
   .under-control .under-control-slogan
@@ -256,9 +259,10 @@
   .section-interview
     min-height: auto
   .scheme-wrap
-    padding: 50px 0
+    padding: 10px 0
   .scheme-wrap .scheme-elem-item.elem-devider
-    height: 52px
+    height: 42px
+    margin: 5px 0
     width: 1px
     border-right: dotted 3px #bdbdbe
     border-top: 0px
@@ -269,11 +273,12 @@
     border: none !important
   .scheme-wrap.white-bg .scheme-elem-item.elem-devider
     border-right: solid 3px #1f2431
-  .section-confidence
-    padding-bottom: 80px
+  .section-confidence,
   .section-open-charity
     padding-bottom: 40px
-  //.section-open-charity
+    padding-top: 90px
+  .section-open-charity
+    padding-bottom: 40px
   .section-open-charity
     .scheme-wrap .trust-item.trust-l-t
       bottom: 174px
@@ -281,17 +286,15 @@
     .scheme-wrap .trust-item.trust-l-b
       left: -213px
   .section-item
-    min-height: auto
-  .section-industry span
-    //top: 250px
+    min-height: 100vh
   .under-control .control-list
     margin-left: 60px
     margin-top: 60px
-  .under-control:before
+  .bg-under-control
     min-height: 600px
     height: 100%
   .section-technologies .scheme-wrap
-    padding-top: 250px
+    padding-top: 75px
   .scheme-wrap .scheme-elem-item.elem-item-main
     flex-direction: column
     justify-content: center
@@ -305,7 +308,6 @@
   .scheme-wrap .scheme-elem-item
     height: auto
   .scheme-wrap .scheme-elem-item.elem-item-main
-    //height: 100px
     line-height: 22px
   .section-confidence
     .scheme-wrap .scheme-elem-item.elem-item-main
@@ -331,17 +333,10 @@
     text-align: left
   .section-technologies .scheme-wrap .trust-item.trust-l-t
     left: -200px
-
+  .section-baner-wrap
+    padding: 5px 20px
 //Medium: ≥768px
 +media-breakpoint-down(md)
-//
-//@media only screen and (max-width : 1100px)
-//   .organization .donation-slogan
-//     width: 100%
-//     font-size: 25px
-//   .organization .charity-slogan
-//     width: 100%
-//     font-size: 25px
 @media only screen and (max-width : 768px)
    .organization .donation-slogan
      width: 100%
@@ -353,21 +348,43 @@
      font-size: 21px
    .organization .charity-slogan
      font-size: 21px
-
+   .organization-form
+     margin: 0 auto
 //Medium: ≥767px
 @media only screen and (max-width : 767px)
+    .organization .footer-bottom-right
+      padding: 0
+    .section-baner-wrap
+      background: #fff
+      &.load
+        display: none
+    .show-interview
+      .section-baner-wrap.load
+        display: flex
+        .btn-more
+          font-size: 15px
+          color: #000 !important
+          border: solid 2px #66d5d6 !important
+        .logo-wrap
+          color: #1f2431 !important
+          font-size: 17px
+          font-family: Pluto
+    .header
+      height: 100%
     .section-item
-      max-height: auto
+      min-height: 100%
+      padding: 20px 0
     .section-interview .left-bg
       display: none
     .header:before
       position: absolute
       width: 100%
       right: 0
-      height: 250px
+      height: 170px
     .left-content-wrap .cloud-1
       width: 40%
-      top: 65px
+      top: 50px;
+      left: 20px;
     .rignt-content-wrap .cloud-4
       top: 320px
       width: 35%
@@ -378,7 +395,8 @@
     .left-content-wrap .cloud-3
       //bottom: 0
       min-width: 250px
-      left: 10%
+      left: 5%
+      top: 160px
     .rignt-content-wrap .cloud-4
       right: 0
       top: 400px
@@ -396,19 +414,20 @@
       width: 212px
     .main-title
       margin-top: 280px
-      margin-bottom: 30px
+      margin-bottom: 20px
       max-width: 91%
       margin-left: auto
       margin-right: auto
-    .header,
+    .section
+      height: 100%
     .section-item
-      min-height: auto
+      max-height: 100%
     .header
       padding-bottom: 200px
     .header .logo-link
       margin-left: 5px
     .rignt-content-wrap .btn-more
-      margin-top: 55px
+      margin-top: 50px
       z-index: 99
     .section-item .btn-more
       width: 120px
@@ -442,18 +461,14 @@
       font-size: 20px
 
     .organization .donation-slogan
-      margin: 0 auto
       text-align: center
     .organization .charity-slogan
-      margin: 0 auto
       text-align: center
-    //td, form
-      //margin-left: 150px
     .section-confidence .confidence-text
       font-size: 15px
     .scheme-wrap .scheme-elem-item
       font-size: 20px
-    .under-control:before
+    .bg-under-control
       min-height: 100%
     .organization .donation,
     .organization .charity
@@ -471,9 +486,18 @@
       .row
         margin-right: -20px
         margin-left: -20px
+    .btn-more-full
+      width: 280px
+    .organization .bankex-foundation
+      padding-left: 0
+    .organization .bankex-com .bankex-com-second
+      padding-right: 0
 //Small: ≥576px
 +media-breakpoint-down(sm)
-
+  .header .logo-link
+    margin-top: 15px;
+    margin-left: 20px !important;
+    font-size: 20px;
   .left-content-wrap .cloud-1
     min-width: 117px
   .section-interview .img-wrap img
@@ -481,14 +505,15 @@
     display: block
     height: auto
   .left-content-wrap .airplane
-    width: auto
-    width: 230px
+    width: 280px
     left: 50%
     transform: translate(-50%, 0)
   .header-text
-    max-width: 80%
+    max-width: 250px
+    text-align: center
+    font-size: 15px
   .header
-    padding-bottom: 65px
+    padding-bottom: 59px
   .section-interview .section-baner-wrap
     top: -55px
   .section-interview .section-baner-wrap
@@ -527,7 +552,6 @@
     min-width: 150px
   .section-technologies .scheme-wrap .trust-item.trust-l-b
     left: -80px
-
     bottom: -70px
   .scheme-wrap .trust-item.trust-l-t
     left: -100px
@@ -536,11 +560,9 @@
   .section-technologies .scheme-wrap .trust-item.trust-l-t
     left: -80px
   .scheme-wrap .trust-item.trust-r-b
-    left: 75px
     left: 70px
     &:before
       left: 25px
-
   .scheme-wrap .trust-item.trust-r-t
     left: 70px
     top: -7px
@@ -566,10 +588,8 @@
     right: 20px
   .scheme-wrap .trust-item.trust-r-t:before
     left: 25px
-  .scheme-wrap .trust-item.trust-r-b:before
-    //left: 35px
   .section-industry .img-wrap
-    padding-top: 20px
+    padding-top: 5px
     padding-bottom: 30px
   .section-industry .industry-slogan
     max-width: 80%
@@ -578,7 +598,7 @@
   .section-industry span
     top: 0
   .under-control .under-control-slogan
-    padding-top: 20px
+    padding-top: 0
   .under-control .control-list
     margin-top: 25px
   .under-control .control-list
@@ -589,7 +609,7 @@
   .under-control .control-list .list-item:before
     width: 16px
     height: 16px
-  .under-control:before
+  .bg-under-control
     min-height: 340px
   .section-technologies .scheme-wrap .trust-item
     font-size: 15px
@@ -603,11 +623,9 @@
     &:before
       top: 35px
   .section-technologies .scheme-wrap .scheme-elem-item.elem-item-main
-    //line-height: 17px
     height: 90px !important
     margin: 0
   .section-technologies .scheme-wrap
-
     padding-top: 180px
   .organization .bankex-foundation
     text-align: center
@@ -620,7 +638,7 @@
     margin: 0
   .organization .footer-bottom-right
     padding-bottom: 25px
-    margin: 15px 0px 0px 0px
+    margin: 15px 0 0 0
   .section-industry .industry-slogan
     font-size: 20px
   .section-interview:before
@@ -646,9 +664,7 @@
     position: relative
     cursor: pointer
     margin-top: 40px
-    //margin-bottom: 10px
     z-index: 999
-    //border: 1px solid red
     &:before
       content: ''
       position: absolute
@@ -670,7 +686,7 @@
   .section-interview .interview-detail .gif-wrap
     display: none
   .main-title
-    margin-top: 250px
+    margin-top: 225px
   .section-interview .section-baner-wrap
     top: -10px
   .rignt-content-wrap .cloud-4
@@ -685,7 +701,7 @@
   .section-interview
     padding-bottom: 25px
   .section-confidence .section-title
-    margin-top: 20px
+    margin-top: 10px
     margin-bottom: 10px
   .section-confidence .confidence-text
     font-weight: 300
@@ -702,7 +718,7 @@
   .section-industry
     padding-bottom: 25px
   .section-technologies .scheme-wrap
-    padding-top: 130px
+    padding-top: 110px
   .section-technologies .scheme-wrap .trust-item.trust-l-t
     bottom: 140px
     text-align: center
@@ -711,14 +727,15 @@
   .section-technologies .scheme-wrap .trust-item.trust-c-t
     top: -105px
   .section-technologies
-    padding-bottom: 110px
+    padding-bottom: 100px
   .organization .charity
     margin-top: 25px
   .organization .charity-slogan,
   .organization .donation-slogan
     text-align: left
+    max-width: 245px;
   .under-control
-    padding-bottom: 50px
+    padding-bottom: 5px
   .organization .donation, .organization .charity
     padding: 20px 20px
   .scheme-wrap .trust-item.trust-r-b
@@ -726,6 +743,68 @@
     bottom: -17px
     width: 128px
     text-align: center
+  .left-content-wrap .airplane
+    top: -60px
+  .section-baner-wrap .logo-wrap
+    font-size: 17px
+  .btn-more
+    width: 120px
+    font-size: 15px
+    height: 40px
+    &.btn-more-full
+     width: 280px
+     padding: 10px 95px 11px 95px
+  .section-industry span
+    max-height: 330px !important
+    canvas
+      max-height: 320px !important
+      height: 320px !important
+  .section-industry
+    padding-bottom: 0
+  .section-industry
+    max-height: 330px
+    height: 330px
+  .under-control .bg-under-control
+    width: 100%
+  .section-industry
+    align-items: flex-start
+    min-height: auto
+    padding-bottom: 25px
+    max-height: 100%
+    height: auto
+  .section-item
+    height: auto
+    min-height: auto
+  .fp-tableCell,
+  .section
+    display: block
+    height: auto !important
+  .section-open-charity .section-title
+    margin-top: 0
+  .section-item.organization
+    padding: 0
+
+@media only screen and (max-width : 550px)
+  .left-content-wrap .airplane
+    width: 170px 
+  .left-content-wrap .airplane
+    top: -75px
+  .main-title
+    margin-top: 220px
+  .section-interview .interview-detail .interview-text
+    max-width: 279px
+
+@media only screen and (min-width : 1450px)
+  .under-control .control-list
+    margin-top: 190px
+  .under-control .under-control-slogan
+    padding-top: 0
+  .under-control .control-list
+@media only screen and (min-width : 2000px)
+  .under-control .control-list
+    margin-top: 270px
+
+
 
 //Extra small: >0
 +media-breakpoint-down(xs)

@@ -596,11 +596,15 @@ body { font-size: 16px; min-width: 320px; position: relative; line-height: 1.23;
 
 button:focus { outline: 0; }
 
+.btn { z-index: 2; }
+
 .btn .focus { -webkit-box-shadow: none; box-shadow: none; }
 
 .btn:focus { -webkit-box-shadow: none; box-shadow: none; }
 
-.btn-more { padding: 11px 10px; font-family: Montserrat; font-size: 24px; font-weight: 500; line-height: 1.21; color: #1f2431; width: 335px; height: 57px; -webkit-border-radius: 2px; border-radius: 2px; border: solid 2px #66d5d6; text-align: center; background: transparent; -webkit-transition: 0.5s; -o-transition: 0.5s; transition: 0.5s; }
+.section { overflow: hidden; }
+
+.btn-more { padding: 11px 10px; font-family: Montserrat; font-size: 24px; font-weight: 500; line-height: 1.21; color: #1f2431; width: 335px; height: 57px; -webkit-border-radius: 2px; border-radius: 2px; border: solid 2px #66d5d6; text-align: center; background: transparent; z-index: 2; -webkit-transition: 0.5s; -o-transition: 0.5s; transition: 0.5s; }
 
 .btn-more.btn-white-text { color: #fff; }
 
@@ -614,7 +618,7 @@ button:focus { outline: 0; }
 
 .header:before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 50%; z-index: -1; background-image: -webkit-linear-gradient(298deg, #66d5d6, #66d5d6 23%, #75dddd 63%, #88e7e6 80%, #b2fefa); background-image: -o-linear-gradient(298deg, #66d5d6, #66d5d6 23%, #75dddd 63%, #88e7e6 80%, #b2fefa); background-image: linear-gradient(152deg, #66d5d6, #66d5d6 23%, #75dddd 63%, #88e7e6 80%, #b2fefa); }
 
-.header .logo-link { display: block; margin-top: 28px; margin-left: 60px; font-family: Pluto; font-size: 27px; line-height: 1.26; letter-spacing: 2px; color: #ffffff; position: absolute; top: 0; }
+.header .logo-link { display: block; margin-top: 28px; margin-left: 130px; font-family: Pluto; font-size: 27px; line-height: 1.26; letter-spacing: 2px; color: #ffffff; position: absolute; top: 0; }
 
 .cloud { position: absolute; z-index: 2; }
 
@@ -624,9 +628,9 @@ button:focus { outline: 0; }
 
 .left-content-wrap .cloud-2 { top: 210px; left: 280px; width: 660px; height: 168px; background: url("../img/02.cloud.svg") no-repeat; }
 
-.left-content-wrap .cloud-3 { bottom: -100px; left: 274px; width: 900px; height: 190px; z-index: 99; background: url("../img/05.cloud.svg") no-repeat; }
+.left-content-wrap .cloud-3 { bottom: -100px; left: 274px; width: 900px; height: 190px; z-index: 99; background: url("../img/05.cloud.svg") no-repeat; z-index: -1; }
 
-.left-content-wrap .airplane { top: 287px; right: -40px; width: 592px; height: 475px; background: url("../img/airplane.png") no-repeat; -webkit-background-size: cover; background-size: cover; }
+.left-content-wrap .airplane { top: 287px; top: 50%; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); right: -40px; width: 592px; height: 475px; background: url("../img/airplane.png") no-repeat; -webkit-background-size: cover; background-size: cover; }
 
 .rignt-content-wrap { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
 
@@ -648,11 +652,11 @@ button:focus { outline: 0; }
 
 .section-baner-wrap.load { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
 
-.section-baner-wrap .logo-wrap img { width: 206px; height: 34px; }
+.section-baner-wrap .logo-wrap imgsection { width: 206px; height: 34px; }
 
 .fp-viewing-0 .section-baner-wrap { -webkit-transition: 0s; -o-transition: 0s; transition: 0s; display: none !important; -webkit-transition: opacity 2.5s linear; -o-transition: opacity 2.5s linear; transition: opacity 2.5s linear; }
 
-.section-item { position: relative; min-height: 1080px; min-height: 100%; max-height: 660px; padding-top: 80px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+.section-item { position: relative; min-height: 100%; max-height: 660px; padding-top: 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 
 .section-item:before { content: ''; position: absolute; left: 0; top: 0; z-index: 8; }
 
@@ -660,7 +664,7 @@ button:focus { outline: 0; }
 
 .section-baner-wrap .logo-wrap.white-logo { color: #fff; }
 
-.section-interview { overflow: hidden; }
+.section-interview { overflow: hidden; padding-top: 0; }
 
 .section-interview .left-bg { position: absolute; height: 100%; width: 50%; bottom: 0; background-color: #f2eedf; z-index: 0; }
 
@@ -698,7 +702,7 @@ button:focus { outline: 0; }
 
 .section-interview .interview-detail .interview-val.orange:before { background-color: #f6ba41; }
 
-.section-interview .interview-detail .interview-text { color: #1f2431; font-size: 15px; line-height: 1.47; margin-top: 25px; font-weight: 700; }
+.section-interview .interview-detail .interview-text { color: #1f2431; font-size: 15px; line-height: 1.47; margin-top: 25px; font-weight: 700; max-width: 390px; }
 
 .main-content { overflow: hidden; }
 
@@ -709,7 +713,7 @@ button:focus { outline: 0; }
 
 .section-confidence .confidence-text { margin-bottom: 120px; max-width: 931px; font-size: 24px; font-weight: 500; line-height: 1.5; color: #ffffff; }
 
-.scheme-wrap { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; padding: 200px 0; width: 100%; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
+.scheme-wrap { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; padding: 200px 0 180px 0; width: 100%; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
 
 .scheme-wrap .scheme-title { font-weight: 700; }
 
@@ -756,7 +760,7 @@ button:focus { outline: 0; }
 
 .section-open-charity .scheme-wrap .trust-item { color: #1f2431; font-weight: 300; }
 
-.section-open-charity .charity-text { max-width: 610px; font-size: 24px; font-weight: 500; line-height: 1.5; color: #1f2431; margin-top: 27px; margin-bottom: 90px; }
+.section-open-charity .charity-text { max-width: 610px; font-size: 24px; font-weight: 500; line-height: 1.5; color: #1f2431; margin-top: 27px; margin-bottom: 60px; }
 
 .section-open-charity .ic-shield { width: 30px; height: 38px; display: inline-block; margin-left: 15px; vertical-align: middle; background: url("../img/09.shield.svg") no-repeat; }
 
@@ -765,7 +769,7 @@ button:focus { outline: 0; }
 .section-open-charity .scheme-wrap .trust-item.trust-l-t { bottom: 205px; }
 
 /*  section technologies ================== */
-.section-technologies { position: relative; padding-bottom: 280px; }
+.section-technologies { position: relative; padding-bottom: 140px; }
 
 .section-technologies .section-technologies .elem-item-main { font-weight: 500; }
 
@@ -802,21 +806,21 @@ button:focus { outline: 0; }
 .section-technologies .scheme-wrap .scheme-elem-item.elem-item-main { height: 100px !important; }
 
 /*  Section-Organization ================== */
-.organization { background-color: #f2f5f7; }
+.organization { background-color: #f2f5f7; padding-top: 100px; }
 
-.organization .charity { margin-top: 30px; background-color: #fff; padding: 45px 50px 100px 50px; }
+.organization .charity { background-color: #fff; padding: 25px 50px 50px 50px; }
 
 .organization .charity input { color: #ebb652; }
 
-.organization .charity .orange-border { border: 2px solid #ebb652; margin: 90px auto 0; display: block; }
+.organization .charity .orange-border { border: 2px solid #ebb652; margin: 40px auto 0; display: block; }
 
 .organization .charity .orange-border:hover { background-color: #ebb652; }
 
-.organization .donation { margin-top: 30px; background-color: #fff; padding: 45px 50px 100px 50px; }
+.organization .donation { background-color: #fff; }
 
-.organization .donation .btn { display: block; margin: 90px auto 0; }
+.organization .donation .btn { display: block; margin: 40px auto 0; }
 
-.organization .charity-slogan { max-width: 410px; font-size: 38px; font-weight: bold; line-height: 1.21; text-align: left; color: #1f2431; }
+.organization .charity-slogan { max-width: 410px; font-size: 35px; font-weight: bold; line-height: 1.21; text-align: left; color: #1f2431; }
 
 .organization .organization-form.right input { width: 100%; margin-bottom: 30px; font-size: 24px; line-height: 1.21; padding: 10px; border-width: 0 0 0; border-bottom: 0.5px solid #66d5d6; }
 
@@ -824,7 +828,7 @@ button:focus { outline: 0; }
 
 .organization .organization-form.right ::-webkit-input-placeholder, .organization .organization-form.right #email2 { color: #66d5d6; }
 
-.organization .organization-form { max-width: 490px; width: 100%; z-index: 1; position: relative; margin-top: 100px; }
+.organization .organization-form { max-width: 490px; width: 100%; z-index: 1; position: relative; margin-top: 40px; }
 
 .organization .organization-form input { width: 100%; margin-bottom: 30px; font-size: 24px; line-height: 1.21; padding: 10px; border-width: 0 0 0; border-bottom: 0.5px solid #ebb652; }
 
@@ -832,13 +836,13 @@ button:focus { outline: 0; }
 
 .organization .organization-form input:focus { outline: none; background-position: 0 0; color: #ebb652; }
 
-.organization .donation-slogan { max-width: 436px; font-size: 38px; font-weight: bold; line-height: 1.21; text-align: left; color: #1f2431; }
+.organization .donation-slogan { max-width: 436px; font-size: 35px; font-weight: bold; line-height: 1.21; text-align: left; color: #1f2431; }
 
-.organization .footer-bottom-left { margin-top: 40px; padding: 0; }
+.organization .footer-bottom-left { padding-top: 90px; }
 
 .organization .bankex-foundation { padding: 0; text-align: left; font-size: 15px; font-weight: bold; line-height: 1.47; text-align: left; color: #1f2431; }
 
-.organization .footer-bottom-right { margin-top: 40px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -webkit-justify-content: flex-end; -ms-flex-pack: end; justify-content: flex-end; padding: 0; }
+.organization .footer-bottom-right { padding-top: 90px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -webkit-justify-content: flex-end; -ms-flex-pack: end; justify-content: flex-end; }
 
 .organization .bankex-com { text-align: right; padding: 0; color: #1f2431; }
 
@@ -847,7 +851,7 @@ button:focus { outline: 0; }
 /*  Section-Industry ================== */
 .section-industry { background-color: #66d5d6; -webkit-background-size: 100% 100%; background-size: 100%; text-align: center; margin: 0px; overflow: hidden; }
 
-.section-industry span { position: absolute; left: 0; right: 0; bottom: 0; top: 100px; top: 60px; width: 100%; height: 100%; overflow: hidden; }
+.section-industry span { position: absolute; left: 0; right: 0; bottom: 0; top: 60px; width: 100%; height: 100%; overflow: hidden; }
 
 .section-industry .img-wrap { padding-top: 20px; padding-bottom: 80px; margin: 0 auto; text-align: center; }
 
@@ -862,9 +866,9 @@ button:focus { outline: 0; }
 /*  Section-Under-Control ================== */
 .under-control { position: relative; z-index: 5; padding-bottom: 160px; }
 
-.under-control:before { content: ''; position: absolute; top: 0; right: 0; left: auto; z-index: -1; width: 960px; height: 1080px; height: 100%; background: url("../img/11.laptop_mock@2x.png") no-repeat center; -webkit-background-size: cover; background-size: cover; }
+.under-control .bg-under-control { position: absolute; top: 0; right: 0; left: auto; z-index: -1; width: 960px; height: 100%; background: url("../img/11.laptop_mock@2x.png") no-repeat center; -webkit-background-size: cover; background-size: cover; }
 
-.under-control .under-control-slogan { max-width: 913px; font-size: 70px; font-weight: bold; line-height: 1.23; text-align: center; color: #1f2431; margin: 0 auto 0; padding-top: 45px; }
+.under-control .under-control-slogan { max-width: 913px; font-size: 70px; font-weight: bold; line-height: 1.23; text-align: center; color: #1f2431; margin: 0 auto 0; padding-top: 0; }
 
 .under-control .industry-subslogan { font-size: 30px; font-weight: 500; line-height: 1.23; text-align: center; color: #1f2431; margin: 45px auto 0; }
 
@@ -890,7 +894,7 @@ button:focus { outline: 0; }
 
 .modal-subslogan-text { max-width: 250px; font-size: 18px; line-height: 1.5; text-align: center; color: #1f2431; margin: 28px auto 0; }
 
-.modal-form .modal-form-item { max-width: 580px; width: 100%; z-index: 1; position: relative; margin-top: 100px; margin: 0 auto; }
+.modal-form .modal-form-item { max-width: 580px; width: 100%; z-index: 1; position: relative; margin: 0 auto; }
 
 .modal-form .modal-form-item input { width: 100%; margin-bottom: 30px; font-size: 24px; line-height: 1.21; padding: 10px; border-width: 0; border-bottom: 0.5px solid #1f2431; }
 
@@ -906,7 +910,11 @@ button:focus { outline: 0; }
 
 .fp-viewing-2 .section-baner-wrap .logo-wrap { color: #fff; }
 
+.fp-viewing-4 .btn-more { border: 2px solid #fff; }
+
 /*==========  Desktop First  ==========*/
+@media only screen and (max-width: 2560px) { .under-control .bg-under-control { width: 50%; } }
+
 @media only screen and (max-width: 1600px) { .rignt-content-wrap .cloud-5 { right: 10px; }
   .main-title { margin-top: 0; }
   .header-text { z-index: 2; }
@@ -915,22 +923,25 @@ button:focus { outline: 0; }
   .left-content-wrap .airplane { width: 480px; height: 400px; top: 194px; }
   .left-content-wrap .cloud-1 { left: 2%; top: 0; }
   .left-content-wrap .cloud-2 { left: 29%; top: 110px; }
-  .left-content-wrap .cloud-3 { width: 85%; width: 280px; left: 22%; }
-  .under-control:before { width: 800px; }
-  .section-interview { padding-bottom: 150px; } }
+  .left-content-wrap .cloud-3 { left: 22%; }
+  .under-control .under-control-slogan { font-size: 55px; }
+  .section-interview { padding-bottom: 0; }
+  .under-control .bg-under-control { width: 800px; }
+  .section-confidence .confidence-text { margin-bottom: 100px; } }
 
 @media only screen and (max-width: 1400px) { .rignt-content-wrap .cloud-5 { width: 40%; }
   .left-content-wrap .cloud { max-width: 290px; }
   .rignt-content-wrap .cloud-4 { width: 40%; max-width: 250px; }
   .left-content-wrap .cloud-1 { width: 200px; }
   .left-content-wrap .airplane { max-width: 400px; -webkit-background-size: 100% 100%; background-size: 100%; background-position: center; }
-  .section-baner-wrap { padding: 18px 60px; }
-  .left-content-wrap .airplane { width: 540px; width: 494px; }
+  .section-baner-wrap { padding: 5px 60px; }
+  .left-content-wrap .airplane { width: 494px; }
+  .section-industry { height: 100vh; max-height: 100%; }
   .btn-more { width: 290px; height: 50px; font-size: 20px; }
   .under-control .under-control-slogan { font-size: 60px; }
   .under-control .control-list .list-item { font-size: 20px; }
   .under-control { min-height: auto; }
-  .under-control:before { min-height: auto; height: 100%; }
+  .bg-under-control { min-height: auto; height: 100%; }
   .section-industry .img-wrap { padding-top: 130px; }
   .section-industry .industry-slogan { font-size: 60px; }
   .section-industry { min-height: auto; padding-bottom: 150px; }
@@ -951,29 +962,36 @@ button:focus { outline: 0; }
   .section-industry .img-wrap img { max-width: 120px; }
   .section-industry .industry-slogan { font-size: 45px; }
   .section-industry .industry-subslogan { font-size: 24px; }
-  .section-technologies .scheme-wrap { padding-top: 170px; }
+  .section-technologies .scheme-wrap { padding-top: 170px; padding-top: 350px; }
   .section-technologies .elem-item-main span { font-size: 60px; }
   .section-technologies .scheme-wrap .trust-item { font-size: 24px; }
-  .section-interview { padding-bottom: 58px; } }
+  .section-interview { padding-bottom: 58px; }
+  .main-title { font-size: 55px; }
+  .section-baner-wrap { padding: 5px 60px; }
+  .btn-more { width: 260px; font-size: 20px; }
+  .under-control .under-control-slogan { font-size: 40px; }
+  .section-item { padding-top: 70px; } }
 
-@media only screen and (max-width: 1200px) { .organization .donation-slogan { font-size: 26px; }
+@media only screen and (max-width: 1200px) { .section-open-charity .charity-text { font-size: 20px; }
+  .organization .donation-slogan { font-size: 26px; }
   .organization .charity-slogan { font-size: 26px; }
   .organization .bankex-com .bankex-com-second { padding-right: 30px; }
   .organization .bankex-foundation { padding-left: 30px; }
-  .under-control:before { opacity: 0.1; }
+  .bg-under-control { opacity: 0.1; }
   .main-title { font-size: 50px; }
   .header-text { max-width: 71%; font-size: 19px; }
-  .section-baner-wrap { padding: 18px 30px; }
+  .section-baner-wrap { padding: 5px 30px; }
   .scheme-wrap .scheme-elem-item { font-size: 24px; }
   .scheme-wrap .trust-item { font-size: 20px; }
   .section-technologies .elem-item-main span { font-size: 45px; }
   .section-technologies .scheme-wrap .trust-item { font-size: 22px; }
-  .under-control:before { width: 100%; }
+  .bg-under-control { width: 100%; }
   .section-industry .industry-slogan { font-size: 45px; }
   .section-industry .img-wrap img { width: 120px; height: 120px; }
   .section-industry { padding-bottom: 60px; }
   .section-industry .img-wrap { padding-top: 80px; }
-  .under-control .control-list .list-item { font-size: 30px; } }
+  .under-control .control-list .list-item { font-size: 30px; }
+  .under-control .bg-under-control { width: 100%; } }
 
 @media (max-width: 1199.98px) { .organization .donation-slogan { font-size: 21px; }
   .organization .charity-slogan { font-size: 21px; }
@@ -1004,18 +1022,18 @@ button:focus { outline: 0; }
   .section-interview { padding-bottom: 90px; }
   .section-confidence .confidence-text { margin-bottom: 20px; }
   .section-interview { min-height: auto; }
-  .scheme-wrap { padding: 50px 0; }
-  .scheme-wrap .scheme-elem-item.elem-devider { height: 52px; width: 1px; border-right: dotted 3px #bdbdbe; border-top: 0px; }
+  .scheme-wrap { padding: 10px 0; }
+  .scheme-wrap .scheme-elem-item.elem-devider { height: 42px; margin: 5px 0; width: 1px; border-right: dotted 3px #bdbdbe; border-top: 0px; }
   .scheme-wrap .scheme-elem-item.elem-devider-arrow { width: 49px; height: 50px; -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); border: none !important; }
   .scheme-wrap.white-bg .scheme-elem-item.elem-devider { border-right: solid 3px #1f2431; }
-  .section-confidence { padding-bottom: 80px; }
+  .section-confidence, .section-open-charity { padding-bottom: 40px; padding-top: 90px; }
   .section-open-charity { padding-bottom: 40px; }
   .section-open-charity .scheme-wrap .trust-item.trust-l-t { bottom: 174px; text-align: center; }
   .section-open-charity .scheme-wrap .trust-item.trust-l-b { left: -213px; }
-  .section-item { min-height: auto; }
+  .section-item { min-height: 100vh; }
   .under-control .control-list { margin-left: 60px; margin-top: 60px; }
-  .under-control:before { min-height: 600px; height: 100%; }
-  .section-technologies .scheme-wrap { padding-top: 250px; }
+  .bg-under-control { min-height: 600px; height: 100%; }
+  .section-technologies .scheme-wrap { padding-top: 75px; }
   .scheme-wrap .scheme-elem-item.elem-item-main { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; height: 200px; }
   .section-technologies .scheme-wrap .trust-item.trust-c-t { top: -160px; }
   .section-technologies .scheme-wrap .trust-item.trust-l-t { bottom: 160px; }
@@ -1029,28 +1047,38 @@ button:focus { outline: 0; }
   .section-technologies .scheme-wrap .trust-item.trust-c-t:before { left: -webkit-calc( 50% - 12px); left: calc( 50% - 12px); }
   .section-technologies .scheme-wrap .trust-item.trust-c-t { left: -webkit-calc( 50% - 110px); left: calc( 50% - 110px); }
   .section-technologies .scheme-wrap .trust-item.trust-r-t { right: -200px; bottom: 160px; text-align: left; }
-  .section-technologies .scheme-wrap .trust-item.trust-l-t { left: -200px; } }
+  .section-technologies .scheme-wrap .trust-item.trust-l-t { left: -200px; }
+  .section-baner-wrap { padding: 5px 20px; } }
 
 @media only screen and (max-width: 768px) { .organization .donation-slogan { width: 100%; font-size: 24px; }
   .organization .charity-slogan { width: 100%; font-size: 24px; }
   .organization .donation-slogan { font-size: 21px; }
-  .organization .charity-slogan { font-size: 21px; } }
+  .organization .charity-slogan { font-size: 21px; }
+  .organization-form { margin: 0 auto; } }
 
-@media only screen and (max-width: 767px) { .section-item { max-height: auto; }
+@media only screen and (max-width: 767px) { .organization .footer-bottom-right { padding: 0; }
+  .section-baner-wrap { background: #fff; }
+  .section-baner-wrap.load { display: none; }
+  .show-interview .section-baner-wrap.load { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
+  .show-interview .section-baner-wrap.load .btn-more { font-size: 15px; color: #000 !important; border: solid 2px #66d5d6 !important; }
+  .show-interview .section-baner-wrap.load .logo-wrap { color: #1f2431 !important; font-size: 17px; font-family: Pluto; }
+  .header { height: 100%; }
+  .section-item { min-height: 100%; padding: 20px 0; }
   .section-interview .left-bg { display: none; }
-  .header:before { position: absolute; width: 100%; right: 0; height: 250px; }
-  .left-content-wrap .cloud-1 { width: 40%; top: 65px; }
+  .header:before { position: absolute; width: 100%; right: 0; height: 170px; }
+  .left-content-wrap .cloud-1 { width: 40%; top: 50px; left: 20px; }
   .rignt-content-wrap .cloud-4 { top: 320px; width: 35%; }
   .left-content-wrap .cloud-2 { left: 50%; min-width: 151px; top: 100px; }
-  .left-content-wrap .cloud-3 { min-width: 250px; left: 10%; }
+  .left-content-wrap .cloud-3 { min-width: 250px; left: 5%; top: 160px; }
   .rignt-content-wrap .cloud-4 { right: 0; top: 400px; min-width: 113px; }
   .left-content-wrap .airplane { top: -65px; min-width: 200px; -webkit-background-size: 100%; background-size: 100%; }
   .rignt-content-wrap .cloud-5 { top: auto; bottom: -80px; left: 0; right: auto; width: 212px; }
-  .main-title { margin-top: 280px; margin-bottom: 30px; max-width: 91%; margin-left: auto; margin-right: auto; }
-  .header, .section-item { min-height: auto; }
+  .main-title { margin-top: 280px; margin-bottom: 20px; max-width: 91%; margin-left: auto; margin-right: auto; }
+  .section { height: 100%; }
+  .section-item { max-height: 100%; }
   .header { padding-bottom: 200px; }
   .header .logo-link { margin-left: 5px; }
-  .rignt-content-wrap .btn-more { margin-top: 55px; z-index: 99; }
+  .rignt-content-wrap .btn-more { margin-top: 50px; z-index: 99; }
   .section-item .btn-more { width: 120px; height: 40px; font-size: 15px; line-height: 1; }
   .left-content-wrap .airplane { min-width: 190px; }
   .section-item .logo-wrap { font-size: 17px; }
@@ -1062,22 +1090,26 @@ button:focus { outline: 0; }
   .under-control .control-list { margin-left: 20px; }
   .scheme-wrap .trust-item { font-size: 15px; }
   .under-control .control-list .list-item { font-size: 20px; }
-  .organization .donation-slogan { margin: 0 auto; text-align: center; }
-  .organization .charity-slogan { margin: 0 auto; text-align: center; }
+  .organization .donation-slogan { text-align: center; }
+  .organization .charity-slogan { text-align: center; }
   .section-confidence .confidence-text { font-size: 15px; }
   .scheme-wrap .scheme-elem-item { font-size: 20px; }
-  .under-control:before { min-height: 100%; }
+  .bg-under-control { min-height: 100%; }
   .organization .donation, .organization .charity { padding: 25px 30px; }
   .organization .charity .orange-border, .organization .donation .btn, .organization .organization-form { margin-top: 30px; }
   .organization .organization-form input, .organization .organization-form.right input { font-size: 15px; }
   .container { padding-left: 20px; padding-right: 20px; }
-  .container .row { margin-right: -20px; margin-left: -20px; } }
+  .container .row { margin-right: -20px; margin-left: -20px; }
+  .btn-more-full { width: 280px; }
+  .organization .bankex-foundation { padding-left: 0; }
+  .organization .bankex-com .bankex-com-second { padding-right: 0; } }
 
-@media (max-width: 767.98px) { .left-content-wrap .cloud-1 { min-width: 117px; }
+@media (max-width: 767.98px) { .header .logo-link { margin-top: 15px; margin-left: 20px !important; font-size: 20px; }
+  .left-content-wrap .cloud-1 { min-width: 117px; }
   .section-interview .img-wrap img { margin: 0 auto; display: block; height: auto; }
-  .left-content-wrap .airplane { width: auto; width: 230px; left: 50%; -webkit-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); transform: translate(-50%, 0); }
-  .header-text { max-width: 80%; }
-  .header { padding-bottom: 65px; }
+  .left-content-wrap .airplane { width: 280px; left: 50%; -webkit-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); transform: translate(-50%, 0); }
+  .header-text { max-width: 250px; text-align: center; font-size: 15px; }
+  .header { padding-bottom: 59px; }
   .section-interview .section-baner-wrap { top: -55px; }
   .section-interview .section-baner-wrap { margin-bottom: 0; }
   .section-interview .container { margin-top: -15px; }
@@ -1097,7 +1129,7 @@ button:focus { outline: 0; }
   .scheme-wrap .trust-item.trust-l-t { left: -100px; }
   .scheme-wrap .trust-item.trust-l-b { left: -100px; }
   .section-technologies .scheme-wrap .trust-item.trust-l-t { left: -80px; }
-  .scheme-wrap .trust-item.trust-r-b { left: 75px; left: 70px; }
+  .scheme-wrap .trust-item.trust-r-b { left: 70px; }
   .scheme-wrap .trust-item.trust-r-b:before { left: 25px; }
   .scheme-wrap .trust-item.trust-r-t { left: 70px; top: -7px; }
   .section-confidence { padding-bottom: 0; }
@@ -1109,15 +1141,15 @@ button:focus { outline: 0; }
   .scheme-wrap .trust-item.trust-l-b:before { right: 10px; }
   .scheme-wrap .trust-item.trust-l-t:before { right: 20px; }
   .scheme-wrap .trust-item.trust-r-t:before { left: 25px; }
-  .section-industry .img-wrap { padding-top: 20px; padding-bottom: 30px; }
+  .section-industry .img-wrap { padding-top: 5px; padding-bottom: 30px; }
   .section-industry .industry-slogan { max-width: 80%; margin: 0 auto; margin-bottom: 30px; }
   .section-industry span { top: 0; }
-  .under-control .under-control-slogan { padding-top: 20px; }
+  .under-control .under-control-slogan { padding-top: 0; }
   .under-control .control-list { margin-top: 25px; }
   .under-control .control-list { margin-left: 0; }
   .under-control .control-list .list-item { max-width: 80%; margin-bottom: 20px; }
   .under-control .control-list .list-item:before { width: 16px; height: 16px; }
-  .under-control:before { min-height: 340px; }
+  .bg-under-control { min-height: 340px; }
   .section-technologies .scheme-wrap .trust-item { font-size: 15px; }
   .section-technologies .scheme-wrap .trust-item.trust-l-b { left: -28px; }
   .section-technologies .scheme-wrap .trust-item.trust-l-t { left: -28px; }
@@ -1128,7 +1160,7 @@ button:focus { outline: 0; }
   .organization .bankex-foundation { text-align: center; display: block; }
   .organization .bankex-com { display: block; text-align: center; }
   .organization .footer-bottom-left { padding-top: 50px; margin: 0; }
-  .organization .footer-bottom-right { padding-bottom: 25px; margin: 15px 0px 0px 0px; }
+  .organization .footer-bottom-right { padding-bottom: 25px; margin: 15px 0 0 0; }
   .section-industry .industry-slogan { font-size: 20px; }
   .section-interview:before { min-height: 570px; }
   .section-technologies .scheme-wrap .trust-item.trust-r-b:before { left: 50px; }
@@ -1142,30 +1174,54 @@ button:focus { outline: 0; }
   .arrow-phone.donation-arrow:before { border: solid #66d5d6; border-width: 0 5px 5px 0; }
   .arrow-phone.active:before { top: 5px; -webkit-transform: rotate(-135deg); -ms-transform: rotate(-135deg); transform: rotate(-135deg); }
   .section-interview .interview-detail .gif-wrap { display: none; }
-  .main-title { margin-top: 250px; }
+  .main-title { margin-top: 225px; }
   .section-interview .section-baner-wrap { top: -10px; }
   .rignt-content-wrap .cloud-4 { top: 368px; z-index: -1; }
   .section-interview .img-wrap img { margin: 0 auto; }
   .section-interview .interview-detail .interview-text { margin-top: 10px; }
   .interview-detail { margin-top: 20px; }
   .section-interview { padding-bottom: 25px; }
-  .section-confidence .section-title { margin-top: 20px; margin-bottom: 10px; }
+  .section-confidence .section-title { margin-top: 10px; margin-bottom: 10px; }
   .section-confidence .confidence-text { font-weight: 300; margin-bottom: 0; }
   .scheme-wrap .scheme-elem-item.elem-devider { margin: 0; }
   .scheme-wrap { padding-bottom: 15px; }
   .section-open-charity { padding-bottom: 10px; }
   .section-industry .industry-slogan { max-width: 100%; font-size: 24px; }
   .section-industry { padding-bottom: 25px; }
-  .section-technologies .scheme-wrap { padding-top: 130px; }
+  .section-technologies .scheme-wrap { padding-top: 110px; }
   .section-technologies .scheme-wrap .trust-item.trust-l-t { bottom: 140px; text-align: center; }
   .section-technologies .scheme-wrap .trust-item.trust-r-t { bottom: 140px; }
   .section-technologies .scheme-wrap .trust-item.trust-c-t { top: -105px; }
-  .section-technologies { padding-bottom: 110px; }
+  .section-technologies { padding-bottom: 100px; }
   .organization .charity { margin-top: 25px; }
-  .organization .charity-slogan, .organization .donation-slogan { text-align: left; }
-  .under-control { padding-bottom: 50px; }
+  .organization .charity-slogan, .organization .donation-slogan { text-align: left; max-width: 245px; }
+  .under-control { padding-bottom: 5px; }
   .organization .donation, .organization .charity { padding: 20px 20px; }
-  .scheme-wrap .trust-item.trust-r-b { white-space: normal; bottom: -17px; width: 128px; text-align: center; } }
+  .scheme-wrap .trust-item.trust-r-b { white-space: normal; bottom: -17px; width: 128px; text-align: center; }
+  .left-content-wrap .airplane { top: -60px; }
+  .section-baner-wrap .logo-wrap { font-size: 17px; }
+  .btn-more { width: 120px; font-size: 15px; height: 40px; }
+  .btn-more.btn-more-full { width: 280px; padding: 10px 95px 11px 95px; }
+  .section-industry span { max-height: 330px !important; }
+  .section-industry span canvas { max-height: 320px !important; height: 320px !important; }
+  .section-industry { padding-bottom: 0; }
+  .section-industry { max-height: 330px; height: 330px; }
+  .under-control .bg-under-control { width: 100%; }
+  .section-industry { -webkit-box-align: start; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; min-height: auto; padding-bottom: 25px; max-height: 100%; height: auto; }
+  .section-item { height: auto; min-height: auto; }
+  .fp-tableCell, .section { display: block; height: auto !important; }
+  .section-open-charity .section-title { margin-top: 0; }
+  .section-item.organization { padding: 0; } }
+
+@media only screen and (max-width: 550px) { .left-content-wrap .airplane { width: 170px; }
+  .left-content-wrap .airplane { top: -75px; }
+  .main-title { margin-top: 220px; }
+  .section-interview .interview-detail .interview-text { max-width: 279px; } }
+
+@media only screen and (min-width: 1450px) { .under-control .control-list { margin-top: 190px; }
+  .under-control .under-control-slogan { padding-top: 0; } }
+
+@media only screen and (min-width: 2000px) { .under-control .control-list { margin-top: 270px; } }
 
 /*==========  Mobile First  ==========*/
 @media (min-width: 1200px) { .logo-link { margin-right: 130px; } }
