@@ -1,0 +1,53 @@
+stages:
+  - setup
+  - release-nginx
+  - deploy
+
+setup:
+  image: node:alpine
+  stage: setup
+  script:
+    - apk add --update git
+    - apk --no-cache add g++ gcc libgcc libstdc++ linux-headers make python
+    - npm install --quiet node-gyp -g
+    - npm install
+    - npm rebuild bcrypt --build-from-source
+    - npm rebuild node-sass
+  artifacts:
+    paths:
+      - app
+    expire_in: 7d
+
+release-nginx:
+  image: docker:latest
+  stage: release-nginx
+  before_script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+  script:
+    - docker build -f docker/Dockerfile -t $CI_REGISTRY_IMAGE .
+    - docker push $CI_REGISTRY_IMAGE
+
+deploy:
+  stage: deploy
+  image: tmaier/docker-compose
+  variables:
+    DOCKER_HOST: "tcp://intro.edu.bankexfoundation.org:2376"
+    DOCKER_TLS_VERIFY: "1"
+    SERVERNAME: oc-landing.bankex.team
+    EMAIL: "om@bankexfoundation.org"
+    DOCKER_CERT_PATH: "/certs"
+  before_script:
+    - mkdir -p $DOCKER_CERT_PATH
+    - echo "$DO_DOCKER_CA_STAGE" > $DOCKER_CERT_PATH/ca.pem
+    - echo "$DO_DOCKER_CERT_STAGE" > $DOCKER_CERT_PATH/cert.pem
+    - echo "$DO_DOCKER_KEY_STAGE" > $DOCKER_CERT_PATH/key.pem
+    - echo "VIRTUAL_HOST=$SERVERNAME" >> .env ; echo "LETSENCRYPT_HOST=$SERVERNAME" >> .env; echo "LETSENCRYPT_EMAIL=$EMAIL" >> .env
+  script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+    - docker-compose -f docker/docker-compose.yml down
+    - docker rmi $CI_REGISTRY_IMAGE || echo "image not exist"
+    - docker pull $CI_REGISTRY_IMAGE
+    - docker-compose -f docker/docker-compose.yml up -d
+  environment:
+    name: landing
+    url: https://oc-landing.bankex.team
