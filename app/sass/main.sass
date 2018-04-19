@@ -1,0 +1,781 @@
+@import "vars"
+@import "mixins"
+@import "../libs/bootstrap/scss/bootstrap-grid.scss"
+@import "normalize"
+
+@font-face
+  font-family: Pluto
+  src: url("../fonts/PlutoRegular.otf")
+  font-weight: 400
+
+.container
+  max-width: 1200px
+
+::placeholder
+  color: #666
+
+::selection
+  background-color: $accent
+  color: #fff
+
+html, body
+  height: 100%
+  overflow: hidden
+
+a:hover
+  +tr(0.5s)
+  text-decoration: none
+
+p
+  margin: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.23
+  font-family: Montserrat
+  overflow-x: hidden
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+.modal-header 
+  .close
+    padding: 5px 15px
+    font-size: 64px
+
+button:focus
+  outline: 0
+
+.btn
+  z-index: 2
+  .focus
+    box-shadow: none
+.btn
+  &:focus
+    box-shadow: none
+.section
+  overflow: hidden
+.btn-more
+  padding: 11px 10px
+  font-family: Montserrat
+  font-size: 24px
+  font-weight: 500
+  line-height: 1.21
+  color: #1f2431
+  width: 335px
+  height: 57px
+  border-radius: 2px
+  border: solid 2px #66d5d6
+  text-align: center
+  background: transparent
+  z-index: 2
+  +tr(0.5s)
+  &.btn-white-text
+    color: #fff
+  &.btn-white-border
+    color: #fff
+    border-color: #fff
+    &:hover
+      color: #66d5d6
+      background-color: #ffffff
+      border: solid 2px #ffffff
+  &:hover
+    color: #fff
+    background: #66d5d6
+
+.header
+  height: 100vh
+  z-index: 2
+  display: flex
+  align-items: center
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    width: 50%
+    z-index: -1
+    background-image: linear-gradient(152deg, #66d5d6, #66d5d6 23%, #75dddd 63%, #88e7e6 80%, #b2fefa)
+
+  .logo-link
+    display: block
+    margin-top: 28px
+    margin-left: 130px
+    font-family: Pluto
+    font-size: 27px
+    line-height: 1.26
+    letter-spacing: 2px
+    color: #ffffff
+    position: absolute
+    top: 0
+
+.cloud
+  position: absolute
+  z-index: 2
+
+.left-content-wrap
+  width: 100%
+  height: 100%
+  overflow: hidden
+  .cloud-1
+    top: 106px
+    left: 100px
+    background: url('../img/04.cloud.svg') no-repeat
+    width: 510px
+    height: 130px
+  .cloud-2
+    top: 210px
+    left: 280px
+    width: 660px
+    height: 168px
+    background: url('../img/02.cloud.svg') no-repeat
+  .cloud-3
+    bottom: -100px
+    left: 274px
+    width: 900px
+    height: 190px
+    z-index: 99
+    background: url('../img/05.cloud.svg') no-repeat
+    z-index: -1
+  .airplane
+    top: 287px
+    top: 50%
+    transform: translate(0, -50%)
+    right: -40px
+    width: 592px
+    height: 475px
+    background: url("../img/airplane.png") no-repeat
+    background-size: cover
+
+.rignt-content-wrap
+  display: flex
+  justify-content: center
+  flex-direction: column
+  .btn-more
+    margin: 200px auto 0 auto
+    display: block
+    z-index: 3
+    background: #fff
+    &:hover
+      background: #66d5d6
+  .cloud-4
+    top: 149px
+    right: 73px
+    width: 397px
+    height: 136px
+    background: url('../img/06.cloud.svg') no-repeat
+  .cloud-5
+    bottom: 50px
+    right: 93px
+    width: 387px
+    height: 110px
+    background: url('../img/03.cloud.svg') no-repeat
+
+.main-title
+  margin-bottom: 60px
+  font-size: 80px
+  line-height: 1.21
+  text-align: center
+  color: #1f2431
+  font-weight: 700
+.section-title
+  font-size: 30px
+  font-weight: bold
+  color: #1f2431
+
+.header-text
+  max-width: 555px
+  margin: 0 auto
+  color: #1f2431
+  font-size: 30px
+  line-height: 1.23
+  font-weight: 300
+  text-align: center
+  z-index: 2
+
+.section-baner-wrap
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  padding: 16px 130px
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  display: none
+  &.load
+    display: flex
+  .logo-wrap
+    imgsection
+      width: 206px
+      height: 34px
+.fp-viewing-0
+  .section-baner-wrap
+    transition: 0s
+    display: none !important
+    transition: opacity 2.5s linear
+
+.section-item
+  position: relative
+  min-height: 100%
+  max-height: 660px
+  padding-top: 0
+  display: flex
+  align-items: center
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 8
+.section-baner-wrap
+  .logo-wrap
+    font-family: Pluto
+    font-size: 27px
+    line-height: 1.26
+    letter-spacing: 1.5px
+    z-index: 9
+    color: #1f2431
+    &.white-logo
+      color: #fff
+
+.section-interview
+  overflow: hidden
+  padding-top: 0
+  .left-bg
+    position: absolute
+    height: 100%
+    width: 50%
+    bottom: 0
+    background-color: #f2eedf
+    z-index: 0
+  .section-baner-wrap
+    margin-bottom: 105px
+  .section-title
+    max-width: 406px
+    font-size: 24px
+    font-weight: bold
+    line-height: 1.2
+    color: #1f2431
+  .img-wrap
+    margin-top: 40px
+    img
+      width: 395px
+      height: 395px
+      max-width: 100%
+      display: block
+
+  .section-text
+    font-size: 15px
+    line-height: 1.27
+    color: #1f2431
+    margin-top: 30px
+    a
+      font-weight: bold
+      color: #66d5d6
+  .interview-detail
+    display: flex
+    flex-direction: column
+    position: relative
+    .gif-wrap
+      position: absolute
+      top: 134px
+      top: 93px
+      right: -80px
+      height: 343px
+      width: 305px
+      z-index: -1
+      img
+        max-width: 100%
+    .interview-item
+      margin-top: 20px
+      &:first-child
+        margin-top: 0
+    .interview-val
+      font-size: 40px
+      font-weight: bold
+      text-align: left
+      color: #1f2431
+      position: relative
+      margin-top: 65px
+      &:before
+        content: ''
+        position: absolute
+        left: 0
+        bottom: -5px
+        width: 90px
+        height: 4px
+        background-color: #383a73
+      &.blue
+        &:before
+          background-color: #66d5d6
+      &.red
+        &:before
+          background-color: #ff9783
+      &.orange
+        position: relative
+        &:before
+          background-color: #f6ba41
+    .interview-text
+      color: #1f2431
+      font-size: 15px
+      line-height: 1.47
+      margin-top: 25px
+      font-weight: 700
+      max-width: 390px
+.main-content
+  overflow: hidden
+/*  section-confidence  ================== */
+.section-confidence
+  background-color: #1f2431
+  .section-title
+    color: #ffffff
+    margin-bottom: 30px
+  .confidence-text
+    margin-bottom: 120px
+    max-width: 931px
+    font-size: 24px
+    font-weight: 500
+    line-height: 1.5
+    color: #ffffff
+
+.scheme-wrap
+  display: flex
+  flex-direction: row
+  align-items: center
+  padding: 200px 0 180px 0
+  width: 100%
+  justify-content: space-between
+  .scheme-title
+    font-weight: 700
+
+  .scheme-elem-item
+    font-size: 30px
+    font-weight: 500
+    color: #bdbdbe
+    &.elem-item-main
+      color: #fff
+      position: relative
+    &.elem-devider
+      width: 52px
+      height: 0
+      border-top: dotted 3px #bdbdbe
+    &.elem-devider-arrow
+      width: 49px
+      height: 11px
+      background: url("../img/small_blue_arrow.svg") no-repeat center
+      border: none !important
+  .trust-item
+    position: absolute
+    text-align: center
+    font-size: 24px
+    line-height: 1.21
+    color: #bdbdbe
+    min-width: 245px
+    &:before
+      content: ''
+      position: absolute
+      width: 73px
+      height: 74px
+      display: block
+      background: url("../img/08.arrow.svg") no-repeat
+    &.trust-l-t
+      left: -250px
+      bottom: 170px
+      text-align: center
+      &:before
+        right: 0
+        bottom: -100px
+        transform: rotate(270deg)
+    &.trust-r-t
+      text-align: center
+      left: 117px
+      top: -215px
+      &:before
+        left: 0
+        bottom: -100px
+        transform: rotate(0deg)
+    &.trust-l-b
+      left: -250px
+      bottom: -165px
+      text-align: right
+      &:before
+        top: -100px
+        right: 0
+        transform: rotate(180deg)
+    &.trust-r-b
+      left: 117px
+      bottom: -155px
+      text-align: left
+      &:before
+        left: 0
+        top: -100px
+        transform: rotate(90deg)
+  &.white-bg
+    .scheme-elem-item.elem-devider
+      border-top: solid 3px #1f2431
+    .scheme-elem-item
+      color: #1f2431
+      &.elem-devider
+        &:before
+          color: #1f2431
+      .elem-item-main
+        color: #1f2431
+      .trust-item
+        &:before
+          background: url("../img/08.arrow_yellow.svg") no-repeat
+/*  section open charity ================== */
+.section-open-charity
+  position: relative
+  //padding-bottom: 180px
+  .scheme-wrap .trust-item
+    color: #1f2431
+    font-weight: 300
+  background: #fff
+  .charity-text
+    max-width: 610px
+    font-size: 24px
+    font-weight: 500
+    line-height: 1.5
+    color: #1f2431
+    margin-top: 27px
+    margin-bottom: 60px
+  .ic-shield
+    width: 30px
+    height: 38px
+    display: inline-block
+    margin-left: 15px
+    vertical-align: middle
+    background: url("../img/09.shield.svg") no-repeat
+  .scheme-wrap .scheme-elem-item.elem-item-main
+    text-align: center
+  .scheme-wrap .trust-item.trust-l-t
+    bottom: 205px
+
+/*  section technologies ================== */
+.section-technologies
+  position: relative
+  padding-bottom: 140px
+  .section-technologies .elem-item-main
+    font-weight: 500
+  .scheme-wrap
+    padding-top: 340px
+  .scheme-wrap .trust-item
+    color: #1f2431
+    font-size: 30px
+  .scheme-wrap .trust-item.trust-l-t
+    left: -340px
+    bottom: 250px
+  .scheme-wrap .trust-item.trust-c-t
+    left : calc( 50% - 122px)
+    top: -180px
+  .scheme-wrap .trust-item.trust-c-t:before
+    transform: rotate( -45deg )
+    left : calc( 50% - 38px)
+    top: 52px
+  .scheme-wrap .trust-item.trust-r-t
+    right: -340px
+    left: auto
+    bottom: 250px
+    top: auto
+  .scheme-wrap .trust-item.trust-l-b
+    left: -140px
+    bottom: -215px
+    &:before
+      transform: rotate(155deg)
+  .scheme-wrap .trust-item.trust-r-b
+    left: 330px
+    bottom: -249px
+    text-align: center
+    &:before
+      left: -10px
+      transform: rotate(115deg)
+  .elem-item-main
+    font-size: 40px
+    font-weight: 500
+    color: #1f2431
+    text-align: center
+    span
+      font-size: 70px
+      font-weight: 700
+      color: #1f2431
+  .trust-r-b
+    text-align: center
+
+.scheme-center
+  justify-content: center
+  .trust-c-t
+    top: -200px
+    left: calc( 100% - 122px)
+.section-technologies
+  .scheme-wrap .scheme-elem-item.elem-item-main
+      height: 100px !important
+/*  Section-Organization ================== */
+.organization
+  background-color: #f2f5f7
+  padding-top: 100px
+  .charity
+    background-color: #fff
+    padding: 25px 50px 50px 50px
+    input
+      color: #ebb652
+    .orange-border
+      border: 2px solid #ebb652
+      margin: 40px auto 0
+      display: block
+      &:hover
+        background-color: #ebb652
+  .donation
+    background-color: #fff
+    .btn
+      display: block
+      margin: 40px auto 0
+  .charity-slogan
+    max-width: 410px
+    font-size: 35px
+    font-weight: bold
+    line-height: 1.21
+    text-align: left
+    color: #1f2431
+  .organization-form
+    &.right
+      input
+       width: 100%
+       margin-bottom: 30px
+       font-size: 24px
+       line-height: 1.21
+       padding: 10px
+       border-width: 0 0 0
+       border-bottom: 0.5px solid #66d5d6
+      ::-webkit-input-placeholder, #donation
+       color: #66d5d6
+      ::-webkit-input-placeholder, #email2
+       color: #66d5d6
+  .organization-form
+    max-width: 490px
+    width: 100%
+    z-index: 1
+    position: relative
+    margin-top: 40px
+    input
+      width: 100%
+      margin-bottom: 30px
+      font-size: 24px
+      line-height: 1.21
+      padding: 10px
+      border-width: 0 0 0
+      border-bottom: 0.5px solid #ebb652
+    ::-webkit-input-placeholder, #organization
+      color: #ebb652
+    input:focus
+      outline: none
+      background-position: 0 0
+      color: #ebb652
+  .donation-slogan
+    max-width: 436px
+    font-size: 35px
+    font-weight: bold
+    line-height: 1.21
+    text-align: left
+    color: #1f2431
+  .footer-bottom-left
+    padding-top: 90px
+  .bankex-foundation
+    padding: 0
+    text-align: left
+    font-size: 15px
+    font-weight: bold
+    line-height: 1.47
+    text-align: left
+    color: #1f2431
+  .footer-bottom-right
+    padding-top: 90px
+    display: flex
+    justify-content: flex-end
+  .bankex-com
+    text-align: right
+    padding: 0
+    color: #1f2431
+    .bankex-com-second
+      font-size: 15px
+      font-weight: 500
+      line-height: 1.27
+      text-align: left
+      color: #66d5d6
+/*  Section-Industry ================== */
+
+.section-industry
+  background-color: #66d5d6
+  background-size: 100%
+  text-align: center
+  margin: 0px
+  overflow: hidden
+  z-index: -1
+  .container >
+  span
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    top: -60px
+    top: 0
+    width: 100%
+    height: 100%
+    overflow: hidden
+    z-index: -1
+  .img-wrap
+    padding-top: 20px
+    padding-bottom: 80px
+    margin: 0 auto
+    text-align: center
+    img
+      width: 165px
+      height: 163px
+  .white-border
+    border: solid 2px #ffffff
+    color: #ffffff
+  .industry-slogan
+    max-width: 913px
+    font-size: 60px
+    font-weight: bold
+    line-height: 1.23
+    text-align: center
+    color: #fff
+    margin: 0 auto
+    margin-bottom: 40px
+  .industry-subslogan
+    font-size: 30px
+    font-weight: 500
+    line-height: 1.23
+    text-align: center
+    color: #1f2431
+    margin: 0 auto
+
+/*  Section-Under-Control ================== */
+.under-control
+  position: relative
+  z-index: 5
+  padding-bottom: 160px
+  .bg-under-control
+    position: absolute
+    top: 0
+    right: 0
+    left: auto
+    z-index: -1
+    width: 960px
+    height: 100%
+    background: url("../img/11.laptop_mock@2x.png") no-repeat center
+    -webkit-background-size: cover
+    background-size: cover
+  .under-control-slogan
+    max-width: 913px
+    font-size: 70px
+    font-weight: bold
+    line-height: 1.23
+    text-align: center
+    color: #1f2431
+    margin: 0 auto 0
+    padding-top: 0
+  .industry-subslogan
+    font-size: 30px
+    font-weight: 500
+    line-height: 1.23
+    text-align: center
+    color: #1f2431
+    margin: 45px auto 0
+  .control-list
+    margin-top: 150px
+    padding-left: 40px
+    .list-item
+      max-width: 390px
+      margin-bottom: 40px
+      font-size: 30px
+      font-weight: 500
+      color: #1f2431
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        left: -40px
+        top: 6px
+        background: url('../img/tick.svg') no-repeat
+        width: 22px
+        height: 26px
+
+.modal-title
+  font-family: Pluto
+  font-size: 27px
+  line-height: 1.26
+  text-align: left
+  color: #1f2431
+
+.modal-content
+  padding-bottom: 70px
+.modal-header
+ border: none
+.modal-dialog
+  max-width: 980px
+  .btn-more
+    margin: 50px auto 0
+    display: block
+.close
+  color: red
+  font-weight: normal
+  font-size: 40px
+.modal-slogan-text
+  font-size: 30px
+  font-weight: bold
+  line-height: 1.23
+  text-align: center
+  color: #1f2431
+.modal-subslogan-text
+  max-width: 250px
+  font-size: 18px
+  line-height: 1.5
+  text-align: center
+  color: #1f2431
+  margin: 28px auto 0
+.modal-form
+  .modal-form-item
+    max-width: 580px
+    width: 100%
+    z-index: 1
+    position: relative
+    margin: 0 auto
+    input
+      width: 100%
+      margin-bottom: 30px
+      font-size: 24px
+      line-height: 1.21
+      padding: 10px
+      border-width: 0
+      border-bottom: 0.5px solid #1f2431
+      &:first-child
+        margin-top: 45px
+    ::-webkit-input-placeholder, #name-modal
+      color: #66d5d6
+    ::-webkit-input-placeholder, #email-modal
+      color: #66d5d6
+    input:focus
+      outline: none
+      background-position: 0 0
+      color: #ebb652
+
+.fp-viewing-2
+  .btn-more
+    color: #fff
+  .section-baner-wrap .logo-wrap
+    color: #fff
+.fp-viewing-4
+  .btn-more
+    border: 2px solid #fff
+@import "media"
+// Always at the end
