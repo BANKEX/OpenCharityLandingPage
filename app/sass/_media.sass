@@ -36,8 +36,18 @@
     width: 800px
   .section-confidence .confidence-text
     margin-bottom: 100px
+  .under-control .under-control-slogan
+    margin-top: 65px
+
+  .under-control .control-list
+    margin-top: 80px
+  @media only screen and (max-width : 1500px)
+    .under-control .control-list
+      margin-top: 180px
 //Extra large: ≥1200px
 @media only screen and (max-width : 1400px)
+  .under-control .under-control-slogan
+    margin-top: 0
   .rignt-content-wrap .cloud-5
     width: 40%
   .left-content-wrap .cloud
@@ -118,8 +128,9 @@
   .section-industry .industry-subslogan
     font-size: 24px
   .section-technologies .scheme-wrap
-    padding-top: 170px
     padding-top: 350px
+  .section-open-charity
+    padding-bottom: 30px
   .section-technologies .elem-item-main span
     font-size: 60px
   .section-technologies .scheme-wrap .trust-item
@@ -137,6 +148,10 @@
     font-size: 40px
   .section-item
     padding-top: 70px
+  .organization .footer-bottom-left,
+  .organization .footer-bottom-right
+    padding-top: 65px
+
 //Extra large: ≥1200px
 @media only screen and (max-width : 1200px)
   .section-open-charity .charity-text
@@ -352,6 +367,8 @@
      margin: 0 auto
 //Medium: ≥767px
 @media only screen and (max-width : 767px)
+    html, body
+      overflow: auto
     .organization .footer-bottom-right
       padding: 0
     .section-baner-wrap
@@ -383,8 +400,8 @@
       height: 170px
     .left-content-wrap .cloud-1
       width: 40%
-      top: 50px;
-      left: 20px;
+      top: 50px
+      left: 20px
     .rignt-content-wrap .cloud-4
       top: 320px
       width: 35%
@@ -393,7 +410,6 @@
       min-width: 151px
       top: 100px
     .left-content-wrap .cloud-3
-      //bottom: 0
       min-width: 250px
       left: 5%
       top: 160px
@@ -495,9 +511,9 @@
 //Small: ≥576px
 +media-breakpoint-down(sm)
   .header .logo-link
-    margin-top: 15px;
-    margin-left: 20px !important;
-    font-size: 20px;
+    margin-top: 15px
+    margin-left: 20px !important
+    font-size: 20px
   .left-content-wrap .cloud-1
     min-width: 117px
   .section-interview .img-wrap img
@@ -733,7 +749,7 @@
   .organization .charity-slogan,
   .organization .donation-slogan
     text-align: left
-    max-width: 245px;
+    max-width: 245px
   .under-control
     padding-bottom: 5px
   .organization .donation, .organization .charity

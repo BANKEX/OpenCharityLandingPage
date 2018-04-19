@@ -580,7 +580,7 @@ html { height: 100%; }
 
 ::selection { background-color: orange; color: #fff; }
 
-html, body { height: 100%; }
+html, body { height: 100%; overflow: hidden; }
 
 a:hover { -webkit-transition: 0.5s; -o-transition: 0.5s; transition: 0.5s; text-decoration: none; }
 
@@ -682,7 +682,7 @@ button:focus { outline: 0; }
 
 .section-interview .interview-detail { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; position: relative; }
 
-.section-interview .interview-detail .gif-wrap { position: absolute; top: 134px; right: -80px; height: 343px; width: 305px; z-index: -1; }
+.section-interview .interview-detail .gif-wrap { position: absolute; top: 134px; top: 93px; right: -80px; height: 343px; width: 305px; z-index: -1; }
 
 .section-interview .interview-detail .gif-wrap img { max-width: 100%; }
 
@@ -849,9 +849,9 @@ button:focus { outline: 0; }
 .organization .bankex-com .bankex-com-second { font-size: 15px; font-weight: 500; line-height: 1.27; text-align: left; color: #66d5d6; }
 
 /*  Section-Industry ================== */
-.section-industry { background-color: #66d5d6; -webkit-background-size: 100% 100%; background-size: 100%; text-align: center; margin: 0px; overflow: hidden; }
+.section-industry { background-color: #66d5d6; -webkit-background-size: 100% 100%; background-size: 100%; text-align: center; margin: 0px; overflow: hidden; z-index: -1; }
 
-.section-industry span { position: absolute; left: 0; right: 0; bottom: 0; top: 60px; width: 100%; height: 100%; overflow: hidden; }
+.section-industry span { position: absolute; left: 0; right: 0; bottom: 0; top: -60px; top: 0; width: 100%; height: 100%; overflow: hidden; z-index: -1; }
 
 .section-industry .img-wrap { padding-top: 20px; padding-bottom: 80px; margin: 0 auto; text-align: center; }
 
@@ -927,9 +927,14 @@ button:focus { outline: 0; }
   .under-control .under-control-slogan { font-size: 55px; }
   .section-interview { padding-bottom: 0; }
   .under-control .bg-under-control { width: 800px; }
-  .section-confidence .confidence-text { margin-bottom: 100px; } }
+  .section-confidence .confidence-text { margin-bottom: 100px; }
+  .under-control .under-control-slogan { margin-top: 65px; }
+  .under-control .control-list { margin-top: 80px; } }
 
-@media only screen and (max-width: 1400px) { .rignt-content-wrap .cloud-5 { width: 40%; }
+@media only screen and (max-width: 1600px) and (max-width: 1500px) { .under-control .control-list { margin-top: 180px; } }
+
+@media only screen and (max-width: 1400px) { .under-control .under-control-slogan { margin-top: 0; }
+  .rignt-content-wrap .cloud-5 { width: 40%; }
   .left-content-wrap .cloud { max-width: 290px; }
   .rignt-content-wrap .cloud-4 { width: 40%; max-width: 250px; }
   .left-content-wrap .cloud-1 { width: 200px; }
@@ -962,7 +967,8 @@ button:focus { outline: 0; }
   .section-industry .img-wrap img { max-width: 120px; }
   .section-industry .industry-slogan { font-size: 45px; }
   .section-industry .industry-subslogan { font-size: 24px; }
-  .section-technologies .scheme-wrap { padding-top: 170px; padding-top: 350px; }
+  .section-technologies .scheme-wrap { padding-top: 350px; }
+  .section-open-charity { padding-bottom: 30px; }
   .section-technologies .elem-item-main span { font-size: 60px; }
   .section-technologies .scheme-wrap .trust-item { font-size: 24px; }
   .section-interview { padding-bottom: 58px; }
@@ -970,7 +976,8 @@ button:focus { outline: 0; }
   .section-baner-wrap { padding: 5px 60px; }
   .btn-more { width: 260px; font-size: 20px; }
   .under-control .under-control-slogan { font-size: 40px; }
-  .section-item { padding-top: 70px; } }
+  .section-item { padding-top: 70px; }
+  .organization .footer-bottom-left, .organization .footer-bottom-right { padding-top: 65px; } }
 
 @media only screen and (max-width: 1200px) { .section-open-charity .charity-text { font-size: 20px; }
   .organization .donation-slogan { font-size: 26px; }
@@ -1056,7 +1063,8 @@ button:focus { outline: 0; }
   .organization .charity-slogan { font-size: 21px; }
   .organization-form { margin: 0 auto; } }
 
-@media only screen and (max-width: 767px) { .organization .footer-bottom-right { padding: 0; }
+@media only screen and (max-width: 767px) { html, body { overflow: auto; }
+  .organization .footer-bottom-right { padding: 0; }
   .section-baner-wrap { background: #fff; }
   .section-baner-wrap.load { display: none; }
   .show-interview .section-baner-wrap.load { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
