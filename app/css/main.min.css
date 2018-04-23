@@ -696,17 +696,13 @@ button:focus { outline: 0; }
 
 .section-interview .interview-detail .interview-val { font-size: 40px; font-weight: bold; text-align: left; color: #1f2431; position: relative; margin-top: 65px; }
 
-.section-interview .interview-detail .interview-val:before { content: ''; position: absolute; left: 0; bottom: -5px; width: 90px; height: 4px; background-color: #383a73; }
+.section-interview .interview-detail .interview-val:before { content: ''; position: absolute; left: 0; bottom: -5px; width: 90px; height: 4px; background-color: #016492; }
 
-.section-interview .interview-detail .interview-val.blue:before { background-color: #66d5d6; }
+.section-interview .interview-detail .interview-val.blue:before { background-color: #51b8eb; }
 
-.section-interview .interview-detail .interview-val.red:before { background-color: #ff9783; }
+.section-interview .interview-detail .interview-val.red:before { background-color: #ff7061; }
 
-.section-interview .interview-detail .interview-val.orange { position: relative; }
-
-.section-interview .interview-detail .interview-val.orange:before { background-color: #f6ba41; }
-
-.section-interview .interview-detail .interview-val.dark-blue:before { background-coor: #2d568c; }
+.section-interview .interview-detail .interview-val.dark-blue:before { background-color: #393b74; }
 
 .section-interview .interview-detail .interview-text { color: #1f2431; font-size: 15px; line-height: 1.47; margin-top: 25px; font-weight: 700; max-width: 390px; }
 
