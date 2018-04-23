@@ -21,10 +21,12 @@
 html, body
   height: 100%
   overflow: hidden
-
+a
+  cursor: pointer
 a:hover
   +tr(0.5s)
   text-decoration: none
+  cursor: pointer
 
 p
   margin: 0
@@ -131,21 +133,20 @@ button:focus
     width: 510px
     height: 130px
   .cloud-2
-    top: 210px
+    top: 50%
     left: 280px
     width: 660px
     height: 168px
+    z-index: 9
     background: url('../img/02.cloud.svg') no-repeat
   .cloud-3
     bottom: -100px
     left: 274px
     width: 900px
     height: 190px
-    z-index: 99
     background: url('../img/05.cloud.svg') no-repeat
     z-index: -1
   .airplane
-    top: 287px
     top: 50%
     transform: translate(0, -50%)
     right: -40px
@@ -201,7 +202,6 @@ button:focus
   z-index: 2
 
 .section-baner-wrap
-  display: flex
   flex-direction: row
   align-items: center
   justify-content: space-between
@@ -219,7 +219,6 @@ button:focus
       height: 34px
 .fp-viewing-0
   .section-baner-wrap
-    transition: 0s
     display: none !important
     transition: opacity 2.5s linear
 
@@ -255,7 +254,7 @@ button:focus
     height: 100%
     width: 50%
     bottom: 0
-    background-color: #f2eedf
+    background-color: #fceed3
     z-index: 0
   .section-baner-wrap
     margin-bottom: 105px
@@ -281,22 +280,24 @@ button:focus
     a
       font-weight: bold
       color: #66d5d6
+      +tr(0.5s)
+      &:hover
+        text-decoration: underline
   .interview-detail
     display: flex
     flex-direction: column
     position: relative
     .gif-wrap
       position: absolute
-      top: 134px
-      top: 93px
-      right: -80px
+      top: 145px
+      right: -140px
       height: 343px
       width: 305px
       z-index: -1
       img
         max-width: 100%
     .interview-item
-      margin-top: 20px
+      margin-top: 40px
       &:first-child
         margin-top: 0
     .interview-val
@@ -324,6 +325,9 @@ button:focus
         position: relative
         &:before
           background-color: #f6ba41
+      &.dark-blue
+        &:before
+          background-coor: #2d568c
     .interview-text
       color: #1f2431
       font-size: 15px
@@ -380,6 +384,7 @@ button:focus
     line-height: 1.21
     color: #bdbdbe
     min-width: 245px
+    transition: opacity 2s
     &:before
       content: ''
       position: absolute
@@ -398,9 +403,9 @@ button:focus
     &.trust-r-t
       text-align: center
       left: 117px
-      top: -215px
+      top: -194px
       &:before
-        left: 0
+        left: -15px
         bottom: -100px
         transform: rotate(0deg)
     &.trust-l-b
@@ -413,10 +418,10 @@ button:focus
         transform: rotate(180deg)
     &.trust-r-b
       left: 117px
-      bottom: -155px
+      bottom: -163px
       text-align: left
       &:before
-        left: 0
+        left: -15px
         top: -100px
         transform: rotate(90deg)
   &.white-bg
@@ -435,7 +440,6 @@ button:focus
 /*  section open charity ================== */
 .section-open-charity
   position: relative
-  //padding-bottom: 180px
   .scheme-wrap .trust-item
     color: #1f2431
     font-weight: 300
@@ -459,7 +463,6 @@ button:focus
     text-align: center
   .scheme-wrap .trust-item.trust-l-t
     bottom: 205px
-
 /*  section technologies ================== */
 .section-technologies
   position: relative
@@ -473,7 +476,7 @@ button:focus
     font-size: 30px
   .scheme-wrap .trust-item.trust-l-t
     left: -340px
-    bottom: 250px
+    bottom: 240px
   .scheme-wrap .trust-item.trust-c-t
     left : calc( 50% - 122px)
     top: -180px
@@ -484,7 +487,7 @@ button:focus
   .scheme-wrap .trust-item.trust-r-t
     right: -340px
     left: auto
-    bottom: 250px
+    bottom: 240px
     top: auto
   .scheme-wrap .trust-item.trust-l-b
     left: -140px
@@ -493,7 +496,7 @@ button:focus
       transform: rotate(155deg)
   .scheme-wrap .trust-item.trust-r-b
     left: 330px
-    bottom: -249px
+    bottom: -244px
     text-align: center
     &:before
       left: -10px
@@ -522,9 +525,18 @@ button:focus
 .organization
   background-color: #f2f5f7
   padding-top: 100px
+  .forms-wrap
+    display: flex
+    justify-content: space-between
+    .charity
+      width: 47%
+      max-width: 47%
+      flex: 0 0 47%
   .charity
     background-color: #fff
     padding: 25px 50px 50px 50px
+    &:nth-child(2)
+      padding: 25px 50px 50px 50px
     input
       color: #ebb652
     .orange-border
@@ -610,6 +622,10 @@ button:focus
       line-height: 1.27
       text-align: left
       color: #66d5d6
+      +tr(0.5s)
+      &:hover
+        text-decoration: underline
+        +tr(0.5s)
 /*  Section-Industry ================== */
 
 .section-industry
@@ -625,17 +641,30 @@ button:focus
     left: 0
     right: 0
     bottom: 0
-    top: -60px
     top: 0
     width: 100%
     height: 100%
     overflow: hidden
     z-index: -1
+    opacity: 0.8
   .img-wrap
     padding-top: 20px
     padding-bottom: 80px
     margin: 0 auto
     text-align: center
+    .animated
+      display: block
+      margin: 0 auto
+      transition: all 2s
+      animation-name: spin
+      animation-duration: 2000ms
+      animation-iteration-count: 1
+      animation-timing-function: linear
+    @keyframes spin
+      from
+        transform: rotate(0deg)
+      to
+        transform: rotate(360deg)
     img
       width: 165px
       height: 163px
@@ -705,11 +734,17 @@ button:focus
         content: ''
         position: absolute
         left: -40px
-        top: 6px
+        top: -35px
         background: url('../img/tick.svg') no-repeat
         width: 22px
         height: 26px
-
+        opacity: 0
+        transition: top 0.5s
+      &.flip
+        &:before
+          top: 0
+          opacity:  1
+          transition: top 0.5s
 .modal-title
   font-family: Pluto
   font-size: 27px

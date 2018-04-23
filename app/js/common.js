@@ -1,8 +1,13 @@
+//togle form on mobile
 $('.arrow-phone').click(function () {
     $(this).toggleClass('active');
     $(this).siblings('.organization-form').toggleClass('open');
 });
 
+var $animation_elements = $('.trust-item');
+var $window = $(window);
+var windowWidth = $(window).width();
+// animation animate.css on pages
 var $isAnimated1 = $('.section-interview .is-animated'),
     $isAnimated1Single = $('.section-interview .is-animated__single'),
     $isAnimated2 = $('.section-confidence .is-animated'),
@@ -12,14 +17,12 @@ var $isAnimated1 = $('.section-interview .is-animated'),
     $isAnimated4 = $('.section-industry .is-animated'),
     $isAnimated4Single = $('.section-industry .is-animated__single'),
     $isAnimated5 = $('.under-control .is-animated'),
+    $isAnimatedBg5 = $('.under-control .is-animated-bg'),
     $isAnimated5Single = $('.under-control .is-animated__single'),
     $isAnimated6 = $('.section-technologies .is-animated'),
     $isAnimated6Single = $('.section-technologies .is-animated__single');
 
-var $animation_elements = $('.trust-item');
-var $window = $(window);
-var windowWidth = $(window).width();
-
+// disabled animation windowWidth < 767px
 $(window).resize(function () {
     windowWidth = $(window).width();
     if (windowWidth < 767) {
@@ -34,6 +37,8 @@ $(window).resize(function () {
         });
     }
 });
+
+// full page init
 $(document).ready(function () {
     $('.section-baner-wrap').addClass('load');
     $('#fullpage').fullpage({
@@ -59,12 +64,12 @@ $(document).ready(function () {
                     $isAnimated1Single.eq(1).css('animation-delay', '1.5s');
                     $isAnimated1Single.eq(2).css('animation-delay', '1s');
                 }
-                if (index == 2) {
+                if (index == 2 && nextIndex == 3) {
                     $isAnimated2Single.addClass('animated bounceInDown').css('animation-delay', '1s');
-                    $isAnimated2Single.eq(1).css('animation-delay', '1.5s');
-                    $isAnimated2Single.eq(2).css('animation-delay', '2s');
-                    $isAnimated2Single.eq(3).css('animation-delay', '2.5s');
-                    $isAnimated2Single.eq(4).css('animation-delay', '3s');
+                    $isAnimated2Single.eq(1).css("animation-delay" , "1.5s" ).addClass('fadeInLeft ');
+                    $isAnimated2Single.eq(2).css('animation-delay', '2s').addClass('fadeInRight ');
+                    $isAnimated2Single.eq(3).css('animation-delay', '2.5s').addClass('fadeInLeft ');
+                    $isAnimated2Single.eq(4).css('animation-delay', '3s').addClass('fadeInRight ');
 
                     $isAnimated3.addClass('animated bounceInDown').css('animation-delay', '1s');
                     $isAnimated3.eq(1).css('animation-delay', '1s');
@@ -72,55 +77,63 @@ $(document).ready(function () {
                     $isAnimated3.eq(3).css('animation-delay', '1.5s');
                     $isAnimated3.eq(4).css('animation-delay', '2s');
                 }
-                if (index == 3) {
+                if (index == 3 && nextIndex == 4) {
                     $isAnimated3Single.addClass('animated bounceInDown').css('animation-delay', '1s');
-                    $isAnimated3Single.eq(1).css('animation-delay', '1.5s');
-                    $isAnimated3Single.eq(2).css('animation-delay', '2s');
-                    $isAnimated3Single.eq(3).css('animation-delay', '2.5s');
-                    $isAnimated3Single.eq(4).css('animation-delay', '3s');
+                    $isAnimated3Single.eq(1).css('animation-delay', '1.5s').addClass('fadeInLeft ');
+                    $isAnimated3Single.eq(2).css('animation-delay', '2s').addClass('fadeInRight ');
+                    $isAnimated3Single.eq(3).css('animation-delay', '2.5s').addClass('fadeInLeft ');
+                    $isAnimated3Single.eq(4).css('animation-delay', '3s').addClass('fadeInRight ');
                 }
-                if (index == 4) {
-
+                if (index == 4 && nextIndex == 5) {
                     $isAnimated4Single.addClass('animated bounceInDown').css('animation-delay', '1s');
                     $isAnimated4Single.eq(1).css('animation-delay', '2s');
                     $isAnimated4Single.eq(2).css('animation-delay', '2.5s');
-                    $isAnimated4Single.eq(3).css('animation-delay', '3s');
-                    $isAnimated4Single.eq(4).css('animation-delay', '3.5s');
+                    setTimeout(function () {
+                        $('.section-industry .img-wrap img').addClass('animated');
+                    }, 1600)
                 }
-                if (index == 5) {
-                    $isAnimated5.addClass('animated bounceInUp').css('animation-delay', '1s');
-                    $isAnimated5.eq(1).css('animation-delay', '1.5s');
-                    $isAnimated5.eq(2).css('animation-delay', '2s');
+                if (index == 5 && nextIndex == 6) {
+                    $isAnimatedBg5.addClass('animated bounceInUp').css('animation-delay', '1s');
+                    // animate checkbox
+                    setTimeout(function () {
+                        $isAnimated5.each(function(i){
+                            var elem = $(this);
+                            setTimeout(function() {
+                                elem.toggleClass('flip');
+                            }, 700*i);
+                        });
+                    }, 2000);
 
                     $isAnimated5Single.addClass('animated bounceInDown').css('animation-delay', '1s');
                     $isAnimated5Single.eq(1).css('animation-delay', '1.5s');
                     $isAnimated5Single.eq(2).css('animation-delay', '2s');
                     $isAnimated5Single.eq(3).css('animation-delay', '2.5s');
                     $isAnimated5Single.eq(4).css('animation-delay', '3s');
+                    $isAnimated5Single.eq(5).css('animation-delay', '3.5s');
+                    $isAnimated5Single.eq(6).css('animation-delay', '4s');
                 }
-                if (index == 6) {
+                if (index == 6 && nextIndex == 7) {
                     $isAnimated6Single.addClass('animated bounceInDown').css('animation-delay', '1s');
-                    $isAnimated6Single.eq(1).css('animation-delay', '1.5s');
-                    $isAnimated6Single.eq(2).css('animation-delay', '2s');
-                    $isAnimated6Single.eq(3).css('animation-delay', '2.5s');
-                    $isAnimated6Single.eq(4).css('animation-delay', '3s');
-                    $isAnimated6Single.eq(5).css('animation-delay', '3.5s');
+                    $isAnimated6Single.eq(1).css('animation-delay', '1.5s').addClass('fadeInLeft ');
+                    $isAnimated6Single.eq(2).css('animation-delay', '2.1s').addClass('fadeInDownBig ');
+                    $isAnimated6Single.eq(3).css('animation-delay', '3s').addClass('fadeInRight ');
+                    $isAnimated6Single.eq(4).css('animation-delay', '3.5s').addClass('fadeInLeft ');
+                    $isAnimated6Single.eq(5).css('animation-delay', '4s').addClass('fadeInRight ');
                 }
             }
         }
     });
 });
 
+// random inimation start
 function check_if_in_view() {
     var window_height = $window.height();
     var window_top_position = $window.scrollTop();
     var window_bottom_position = (window_top_position + window_height);
 }
-
 $window.on('scroll resize', check_if_in_view);
 $window.trigger('scroll');
-
-var SEPARATION = 100,
+var SEPARATION = 120,
     AMOUNTX = 100,
     AMOUNTY = 70,
     sectionIndustry;
@@ -130,13 +143,11 @@ var particles, particle, count = 0;
 var mouseX = 85,
     mouseY = -342;
 var windowHalfX = window.innerWidth / 2;
-var windowHalfY = window.innerHeight / 2 + 60;
+var windowHalfY = window.innerHeight / 2;
 
 init();
 animate();
-
 function init() {
-
     container = document.createElement('span');
     sectionIndustry = document.getElementsByClassName("section-industry");
     document.body.appendChild(container);
@@ -154,7 +165,6 @@ function init() {
             context.fill();
         }
     });
-
     var i = 0;
     for (var ix = 0; ix < AMOUNTX; ix++) {
         for (var iy = 0; iy < AMOUNTY; iy++) {
@@ -165,16 +175,11 @@ function init() {
         }
     }
     renderer = new THREE.CanvasRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight + 100);
+    renderer.setSize(window.innerWidth, window.innerHeight);
     container.appendChild(renderer.domElement);
-
-    // document.addEventListener('mousemove', onDocumentMouseMove, false);
-    // document.addEventListener('touchstart', onDocumentTouchStart, false);
-    // document.addEventListener('touchmove', onDocumentTouchMove, false);
-    //
+    document.addEventListener('mousemove', onDocumentMouseMove, false);
     window.addEventListener('resize', onWindowResize, false);
 }
-
 function onWindowResize() {
     windowHalfX = window.innerWidth / 2;
     windowHalfY = window.innerHeight / 2;
@@ -182,37 +187,14 @@ function onWindowResize() {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 }
-
-//
-
-// function onDocumentMouseMove(event) {
-//     mouseX = event.clientX - windowHalfX;
-//     mouseY = event.clientY - windowHalfY;
-// }
-//
-// function onDocumentTouchStart(event) {
-//     if (event.touches.length === 1) {
-//         // event.preventDefault();
-//         mouseX = event.touches[0].pageX - windowHalfX;
-//         mouseY = event.touches[0].pageY - windowHalfY;
-//     }
-// }
-//
-// function onDocumentTouchMove(event) {
-//     if (event.touches.length === 1) {
-//         // event.preventDefault();
-//         mouseX = event.touches[0].pageX - windowHalfX;
-//         mouseY = event.touches[0].pageY - windowHalfY;
-//     }
-// }
-
-//
-
+function onDocumentMouseMove(event) {
+    mouseX = event.clientX - windowHalfX;
+    mouseY = event.clientY - windowHalfY;
+}
 function animate() {
     requestAnimationFrame(animate);
     render();
 }
-
 function render() {
     camera.position.x += (mouseX - camera.position.x) * .05;
     camera.position.y += (-mouseY - camera.position.y) * .05;
@@ -228,3 +210,4 @@ function render() {
     renderer.render(scene, camera);
     count += 0.1;
 }
+// random inimation end
